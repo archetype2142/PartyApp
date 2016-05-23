@@ -1,0 +1,38 @@
+<style>
+  body{
+    padding-top: 70px;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-centered">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <div id="logbox">
+       <h1 style="text-align:center; font-size: 60px">Edit <%= resource_name.to_s.humanize %></h1>
+       <%= devise_error_messages! %>
+       <input id='user_email' name="user[email]" type="email" placeholder="Enter Your Email" class="input pass" autofocus="true" />
+       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+       <% end %>
+       <input name="user[password]" type="password" placeholder="Enter Your Password (leave blank if you don't want to change it)"  required="required" class="input pass" autocomplete="off" />
+       <input name="user[password_confirmation]" type="password" placeholder="Password Confirmation" required="required" class="input pass" autocomplete="off" />
+       <input name="user[current_password]" type="password" placeholder="Current Password" required="required" class="input pass" autocomplete="off" />
+       <div class="text-center">
+        (we need your current password to confirm your changes)
+      </div>
+      <div class="actions">
+        <%= f.submit "Update", :class => 'inputButton' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<br>
+
+<div id="logbox" class="col-md-5 col-centered">
+ <input type="hidden" />
+ <h3 style="text-align:center; font-size: 40px">Unhappy? <br>Cancel my account</h3>
+ <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'inputButton' %></p>
+ <div class="text-center">
+   <%= link_to "Back", :back %>
+ </div>

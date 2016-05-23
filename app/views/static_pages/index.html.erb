@@ -1,0 +1,22 @@
+<% provide(:title, 'Home') %>
+<!DOCTYPE html>
+<html>
+<body>
+	 <header class="header">
+        <div class="text-vertical-center">
+            <h1 class="element" style="color:orange;padding-bottom:250px;border-color:red"></h1>
+            <br>
+			<%= link_to "Let's Go", registrations_path, :class => 'btn btn-dark btn-lg' %>
+        </div>
+    </header>
+
+</body>
+</html>
+<script>
+    $(function(){
+      $(".element").typed({
+        strings: ["Welcome to the Party", "Click below to get started"],
+        typeSpeed: 10
+      });
+    });
+</script>

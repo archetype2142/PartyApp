@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-5 col-centered">
+			<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+			<div id="logbox">
+				<h1 style="text-align:center; font-size: 60px">Resend confirmation instructions</h1>
+				<%= devise_error_messages! %>
+				<input name="user[email]" type="email" placeholder="Enter Your Email" class="input pass" autofocus="true" value="<%= (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>" />
+
+				<div class="actions">
+					<%= f.submit "Resend confirmation instructions", :class => 'inputButton' %>
+				</div>
+				<% end %>
+				<div class="text-center">
+					<%= render "devise/shared/links" %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

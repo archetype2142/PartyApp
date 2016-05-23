@@ -1,0 +1,26 @@
+<style>
+  body{
+    padding-top: 70px;
+  }
+</style>
+<div class="container">
+	<div class="row">
+		<div class="col-md-5 col-centered">
+			<div id="logbox">
+				<h1 style="text-align:center; font-size: 60px">Forgot your password?</h1>
+				<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+				<%= devise_error_messages! %>
+
+				<input id='user_email' name="user[email]" type="email" placeholder="Enter Your Email" class="input pass" autofocus="true" />
+
+				<div class="actions">
+					<%= f.submit "Send me reset password instructions", :class => 'inputButton' %>
+				</div>
+				<% end %>
+				<div class="text-center">
+					<%= render "devise/shared/links" %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
