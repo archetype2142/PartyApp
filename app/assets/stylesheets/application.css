@@ -31,3 +31,75 @@
  	color: #525798;
  	font-weight: 300;
  }
+/* Registration Pages styles */
+ .input {
+  width: 75%;
+  height: 50px;
+  display: block;
+  margin: 0 auto 15px;
+  padding: 0 15px;
+  border: none;
+  border-bottom: 2px solid #ebebeb;
+ }
+ .input:focus {
+  outline: none;
+  border-bottom-color: #3CC !important;
+ }
+ .input:hover {
+  border-bottom-color: #dcdcdc;
+ }
+ .input:invalid {
+  box-shadow: none;
+ }
+
+ .pass:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+ }
+
+ .inputButton {
+  border-radius: 5px;
+  position: relative;
+  width: 85%;
+  height: 50px;
+  display: block;
+  margin: 30px auto 30px;
+  color: white;
+  background-color: #3CC;
+  border: none;
+  -webkit-box-shadow: 0 5px 0 #2CADAD;
+  -moz-box-shadow: 0 5px 0 #2CADAD;
+  box-shadow: 0 5px 0 #2CADAD;
+ }
+ .inputButton:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #2CADAD;
+  -moz-box-shadow: 0 3px 0 #2CADAD;
+  box-shadow: 0 3px 0 #2CADAD;
+ }
+ .inputButton:active {
+  top: 5px;
+  box-shadow: none;
+ }
+ .inputButton:focus {
+  outline: none;
+ }
+ .field{
+  padding-left: 23px;
+ }
+
+ #logbox{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+ }
+ .add_pad{
+  margin: 0 auto 15px;
+  padding-left: 90px;
+ }
+ .field{
+  padding-left: 90px;
+}
