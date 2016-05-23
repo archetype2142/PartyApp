@@ -1,95 +1,75 @@
 <style>
 	.navbar-default {
-		background-color: #a67c00;
-		border-color: #bf9b30;
+		background-color: #525798;
+		border-color: #6e5fb4;
 	}
 	.navbar-default .navbar-brand {
-		color: #ecf0f1;
+		color: #ecdbff;
 	}
 	.navbar-default .navbar-brand:hover,
 	.navbar-default .navbar-brand:focus {
-		color: #ffdc73;
+		color: #ecdbff;
 	}
 	.navbar-default .navbar-text {
-		color: #ecf0f1;
+		color: #ecdbff;
 	}
 	.navbar-default .navbar-nav > li > a {
-		color: #ecf0f1;
+		color: #ecdbff;
 	}
 	.navbar-default .navbar-nav > li > a:hover,
 	.navbar-default .navbar-nav > li > a:focus {
-		color: #ffdc73;
-	}
-	.navbar-default .navbar-nav > li > .dropdown-menu {
-		background-color: #a67c00;
-	}
-	.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
-		color: #ecf0f1;
-	}
-	.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
-	.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
-		color: #ffdc73;
-		background-color: #bf9b30;
-	}
-	.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
-		background-color: #bf9b30;
-	}
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-		color: #ffdc73;
-		background-color: #bf9b30;
+		color: #ecdbff;
 	}
 	.navbar-default .navbar-nav > .active > a,
 	.navbar-default .navbar-nav > .active > a:hover,
 	.navbar-default .navbar-nav > .active > a:focus {
-		color: #ffdc73;
-		background-color: #bf9b30;
+		color: #ecdbff;
+		background-color: #6e5fb4;
 	}
 	.navbar-default .navbar-nav > .open > a,
 	.navbar-default .navbar-nav > .open > a:hover,
 	.navbar-default .navbar-nav > .open > a:focus {
-		color: #ffdc73;
-		background-color: #bf9b30;
+		color: #ecdbff;
+		background-color: #6e5fb4;
 	}
 	.navbar-default .navbar-toggle {
-		border-color: #bf9b30;
+		border-color: #6e5fb4;
 	}
 	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus {
-		background-color: #bf9b30;
+		background-color: #6e5fb4;
 	}
 	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #ecf0f1;
+		background-color: #ecdbff;
 	}
 	.navbar-default .navbar-collapse,
 	.navbar-default .navbar-form {
-		border-color: #ecf0f1;
+		border-color: #ecdbff;
 	}
 	.navbar-default .navbar-link {
-		color: #ecf0f1;
+		color: #ecdbff;
 	}
 	.navbar-default .navbar-link:hover {
-		color: #ffdc73;
+		color: #ecdbff;
 	}
 
 	@media (max-width: 767px) {
 		.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-			color: #ecf0f1;
+			color: #ecdbff;
 		}
 		.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
 		.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-			color: #ffdc73;
+			color: #ecdbff;
 		}
 		.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
 		.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
 		.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-			color: #ffdc73;
-			background-color: #bf9b30;
+			color: #ecdbff;
+			background-color: #6e5fb4;
 		}
 	}
 </style>
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -99,14 +79,14 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">
-				Navbar
+			<a class="navbar-brand" href="/">
+				Logo
 			</a>
 		</div>
 
 		<div class="text-center collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/">Home <span class="sr-only">(current)</span></a></li>
+				<li><a href="/">Home<span class="sr-only">(current)</span></a></li>
 				<li><a id="help"  href="#">Help</a></li>
 
 				<% if current_user %>
@@ -128,4 +108,5 @@
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
