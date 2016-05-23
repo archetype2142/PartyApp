@@ -8,6 +8,10 @@ Potential Market - School/College students, Weddings, Corporate Parties, Birthda
 Running Rails v4.2.6
 The app requires Devise for user authentication to work.
 
+Using Puma webserver for development and production version. Uses MYSQL3 in development. Postgres in production on heroku.
+
+Port to amazon aws on 3rd June.
+
 DataBase has 2 tables
 
 ## User Table
@@ -32,15 +36,17 @@ Both tables have separate models with same names. Need to add additional forms a
 
 # Update 
 
-Home page design 1.0
-- Title
-- Jumbotron
-- How it works
-- Graphic models
-- Contact 
-- Footer
+2 Using Puma, removed WEBrick
 
-Home page design v0.1
-- Full page image
-- TypedJs
-- Register redirect
+1 Home page design v 1.0
+	- Title
+	- Jumbotron
+	- How it works
+	- Graphic models
+	- Contact 
+	- Footer
+
+0 Home page design v 0.1
+	- Full page image
+	- TypedJs
+	- Register redirect
