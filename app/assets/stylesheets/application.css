@@ -109,6 +109,7 @@ body {
 .field{
   padding-left: 90px;
 }
+
 .bg {
   background: url('jb-bg.jpg') no-repeat center center;
   position: fixed;
@@ -119,15 +120,3 @@ body {
   z-index: -1;
 }
 
-.section {
-  padding: 10px 5px;
-  text-align: center;
-  min-height: 50px;
-  background-position: fixed;
-  width: 100%;
-  background: url('home-bg.jpg');
-  font-family: 'Montserrat', sans-serif;
-  text-shadow: #444 0 1px 1px;
-  background: rgb(200, 54, 54); /* This is for ie8 and below */
-  background: rgba(200, 54, 54, 0.5)
-}
