@@ -49,6 +49,7 @@ group :development do
 end
 
 group :production do
+  gem 'rails_serve_static_assets'
 	gem 'pg'
 	gem 'mini_portile2'
 	gem 'rails_12factor'
