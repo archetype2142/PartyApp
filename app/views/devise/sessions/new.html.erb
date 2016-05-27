@@ -9,6 +9,11 @@
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div id="logbox">
         <h1>Log In</h1>
+        <div class="text-center">
+          <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+          <%- end -%>  
+        </div>
         <input name="user[email]" type="email" placeholder="enter your email" class="input pass"/>
         <input name="user[password]" type="password" placeholder="enter your password" required="required" class="input pass"/>
         <% if devise_mapping.rememberable? -%>
