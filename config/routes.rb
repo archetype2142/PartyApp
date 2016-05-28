@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :services
   devise_for :service_providers
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
@@ -9,7 +10,8 @@ Rails.application.routes.draw do
    get 'registrations' => 'static_pages#registrations'  
    
 
-  # Example of regular route:
+  resources :service
+   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
