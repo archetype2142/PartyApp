@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html>
 <body>
+	<div class="text-center">
+		<h1> My Services </h1>
+	</div>
 	<table>
 		<thead>
 			<tr>
@@ -20,6 +23,9 @@
 				<td><%= service.description %></td>
 				<td><%= service.price %></td>
 				<td><%= service.location %></td>
+				<td><%= link_to 'Show', service %></td>
+				<td><%= link_to 'Edit', edit_service_path(service) %></td>
+				<td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 			<% end %>
 		</tbody>
