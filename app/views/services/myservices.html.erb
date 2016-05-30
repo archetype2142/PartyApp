@@ -1,0 +1,28 @@
+<% provide(:title, 'My Services') %>
+<!DOCTYPE html>
+<html>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Service name</th>
+				<th>Description</th>
+				<th>Price</th>
+				<th>Location</th>
+				<th colspan="3"></th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @services.each do |service| %>
+			<tr>
+				<td><%= service.service_name %></td>
+				<td><%= service.description %></td>
+				<td><%= service.price %></td>
+				<td><%= service.location %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</body>
+</html>

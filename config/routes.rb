@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'static_pages#index'
    get 'registrations' => 'static_pages#registrations'  
-   
+   get 'myservices' => 'services#myservices'
 
   resources :service
    # Example of regular route:

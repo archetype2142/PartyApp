@@ -21,12 +21,15 @@ class ServicesController < ApplicationController
   def edit
   end
 
-  # POST /services
+   def myservices
+    @services = Service.where(:service_provider_id => current_service_provider.id)
+  end
+
+  # POST /services 
   # POST /services.json
   def create
-    @service_provider = current_service_provider
     @service = Service.new(service_params)
-    
+    @service.service_provider_id = current_service_provider.id    
     respond_to do |format|
       if @service.save
         format.html { redirect_to @service, notice: 'Service was successfully created.' }
@@ -70,6 +73,6 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:service_name, :description, :price, :location)
+      params.require(:service).permit(:service_provider_id, :service_name, :description, :price, :location)
     end
 end
