@@ -36,6 +36,10 @@ Both tables have separate models with same names. Need to add additional forms a
 
 # Update 
 
+4 Added personal services page unique to every service provider
+
+3 Changed navbar for both kinds of users
+
 2 Using Puma, removed WEBrick
 
 1 Home page design v 1.0
