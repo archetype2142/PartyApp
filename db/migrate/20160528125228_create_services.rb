@@ -1,7 +1,7 @@
 class CreateServices < ActiveRecord::Migration
   def change
     create_table :services do |t|
-      t.belongs_to :service_provider, index: true
+      t.integer :service_provider_id
       t.string :service_name
       t.text :description
       t.integer :price

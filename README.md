@@ -28,8 +28,9 @@ Both tables have separate models with same names. Need to add additional forms a
     
     Home
     Type of user
-    Search Catalog
+    Search Catalog for services
     Login, Registration, Password Reset
+    Service-unique page
     About Provider
     About
     Terms Agreement
