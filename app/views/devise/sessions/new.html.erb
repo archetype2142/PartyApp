@@ -14,7 +14,7 @@
           <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
           <%- end -%>  
         </div>
-        <input name="user[email]" type="email" placeholder="enter your email" class="input pass"/>
+        <input name="user[login]" type="login" placeholder="enter your email/username" class="input pass"/>
         <input name="user[password]" type="password" placeholder="enter your password" required="required" class="input pass"/>
         <% if devise_mapping.rememberable? -%>
         <div class="field">

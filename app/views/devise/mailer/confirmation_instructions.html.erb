@@ -1,5 +1,10 @@
-<p>Welcome <%= @email %>!</p>
-
+<h1>Welcome <%= @name %>!</h1>
+<p>You just registered for the best Party Organizing service in the world <br>
+We promise we won't send any spam. <br>
+Here's your account details, verify them before confirming your account. <br>
+Name: <%= @name %> <br>
+Username: <%= @Username %> <br>
+</p>
 <p>You can confirm your account email through the link below:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
