@@ -1,124 +1,58 @@
-<style>
-	.navbar-default {
-		background-color: #525798;
-		border-color: #6e5fb4;
-	}
-	.navbar-default .navbar-brand {
-		color: #ecdbff;
-	}
-	.navbar-default .navbar-brand:hover,
-	.navbar-default .navbar-brand:focus {
-		color: #ecdbff;
-	}
-	.navbar-default .navbar-text {
-		color: #ecdbff;
-	}
-	.navbar-default .navbar-nav > li > a {
-		color: #ecdbff;
-	}
-	.navbar-default .navbar-nav > li > a:hover,
-	.navbar-default .navbar-nav > li > a:focus {
-		color: #ecdbff;
-	}
-	.navbar-default .navbar-nav > .active > a,
-	.navbar-default .navbar-nav > .active > a:hover,
-	.navbar-default .navbar-nav > .active > a:focus {
-		color: #ecdbff;
-		background-color: #6e5fb4;
-	}
-	.navbar-default .navbar-nav > .open > a,
-	.navbar-default .navbar-nav > .open > a:hover,
-	.navbar-default .navbar-nav > .open > a:focus {
-		color: #ecdbff;
-		background-color: #6e5fb4;
-	}
-	.navbar-default .navbar-toggle {
-		border-color: #6e5fb4;
-	}
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus {
-		background-color: #6e5fb4;
-	}
-	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #ecdbff;
-	}
-	.navbar-default .navbar-collapse,
-	.navbar-default .navbar-form {
-		border-color: #ecdbff;
-	}
-	.navbar-default .navbar-link {
-		color: #ecdbff;
-	}
-	.navbar-default .navbar-link:hover {
-		color: #ecdbff;
-	}
+<!-- Navigation -->
+<div class="custom_nav">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="http://placehold.it/150x50&text=Logo" alt="">
+				</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<% if current_user %>
+					<li class="text-center"><a href='#'>Hi, <%= current_user.name %></a></li>
+					<% end %>
+					<li class="text-center"><a id="help"  href="#">Help</a></li>
 
-	@media (max-width: 767px) {
-		.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-			color: #ecdbff;
-		}
-		.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-		.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-			color: #ecdbff;
-		}
-		.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-		.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-		.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-			color: #ecdbff;
-			background-color: #6e5fb4;
-		}
-	}
-</style>
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="/">
-				Logo
-			</a>
+					<% if current_user %>
+					<ul class="text-center nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li class="text-center"><%= link_to "Account Settings", edit_user_registration_path %></li>
+								<li class="text-center"><%= link_to "Logout", destroy_user_session_path, method: :delete, confirm: "Are you sure?" %></li>
+							</ul>
+						</li>
+					</ul>
+					<% elsif current_service_provider%>
+					<ul class="text-center nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li class="text-center"><%= link_to "My Services", myservices_path %></li>
+								<li class="text-center"><%= link_to "Add Service", new_service_path %></li>
+								<li class="text-center"><%= link_to "Logout", destroy_service_provider_session_path, method: :delete, confirm: "Are you sure?" %>
+								</li>						
+							</ul>
+						</li>
+					</ul>
+					<% else %>
+					<li class="text-center"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+					<li class="text-center"><%= link_to "Sign Up", new_user_registration_path %></li>
+					<li class="text-center"><%= link_to "Login", registrations_path %></li>
+					<% end %>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
 		</div>
-
-		<div class="text-center collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-				<% if current_user %>
-				<li><a href='#'>Hi, <%= current_user.name %></a></li>
-				<% end %>
-				<li><a href="/">Home<span class="sr-only">(current)</span></a></li>
-				<li><a id="help"  href="#">Help</a></li>
-
-				<% if current_user %>
-				<ul class="text-center nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li class="text-center"><%= link_to "Account Settings", edit_user_registration_path %></li>
-							<li class="text-center"><%= link_to "Logout", destroy_user_session_path, method: :delete, confirm: "Are you sure?" %></li>
-						</ul>
-					</li>
-				</ul>
-				<% elsif current_service_provider%>
-				<ul class="text-center nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li class="text-center"><%= link_to "My Services", myservices_path %></li>
-							<li class="text-center"><%= link_to "Add Service", new_service_path %></li>
-							<li class="text-center"><%= link_to "Logout", destroy_service_provider_session_path, method: :delete, confirm: "Are you sure?" %>
-							</li>						
-						</ul>
-					</li>
-				</ul>
-				<% else %>
-				<li><%= link_to "Login", registrations_path %>
-				</li>
-				<% end %>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
-</nav>
+		<!-- /.container -->
+	</nav>
+</div>

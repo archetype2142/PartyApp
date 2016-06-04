@@ -3,28 +3,31 @@
     padding-top: 70px;
   }
 </style>
-<h2>Change your password</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-centered">
+      <div id="logbox">
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+        <h1 style="text-align:center; font-size: 60px">Change your password</h1>
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :reset_password_token %>
+
+        <input id='user_password' name="user[password]" type="password" placeholder="Enter Your Email(minimum 6 characters)" class="input pass" autofocus="true",  autocomplete="off" />
+
+        <input id='user_password_confirmation' name="user[password_confirmation]" type="password" placeholder="Password confirmation" class="input pass"  autocomplete="off" />
+
+        <div class="actions">
+          <%= f.submit "Change my password", :class => 'inputButton' %>
+        </div>
+        <% end %>
+
+        <div class="text-center">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
