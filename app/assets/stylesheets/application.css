@@ -44,7 +44,7 @@ body {
 }
 .input:focus {
   outline: none;
-  border-bottom-color: #3CC !important;
+  border-bottom-color: #ff005a !important;
 }
 .input:hover {
   border-bottom-color: #dcdcdc;
@@ -65,17 +65,17 @@ body {
   display: block;
   margin: 30px auto 30px;
   color: white;
-  background-color: #b77eff;
+  background-color: #5d005e;
   border: none;
-  -webkit-box-shadow: 0 5px 0 #b366c7;
-  -moz-box-shadow: 0 5px 0 #b366c7;
-  box-shadow: 0 5px 0 #b366c7;
+  -webkit-box-shadow: 0 5px 0 #ff005a;
+  -moz-box-shadow: 0 5px 0 #ff005a;
+  box-shadow: 0 5px 0 #ff005a;
 }
 .inputButton:hover {
   top: 2px;
-  -webkit-box-shadow: 0 3px 0 #2CADAD;
-  -moz-box-shadow: 0 3px 0 #2CADAD;
-  box-shadow: 0 3px 0 #2CADAD;
+  -webkit-box-shadow: 0 3px 0 #bf0060;
+  -moz-box-shadow: 0 3px 0 #bf0060;
+  box-shadow: 0 3px 0 #bf0060;
 }
 .inputButton:active {
   top: 5px;
