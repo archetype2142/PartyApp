@@ -1,11 +1,40 @@
+<style>
+	.inputButton {
+		border-radius: 5px;
+		position: relative;
+		width: 85%;
+		height: 50px;
+		display: block;
+		margin: 30px auto 30px;
+		color: white;
+		background-color: #5d005e;
+		border: none;
+		-webkit-box-shadow: 0 5px 0 #ff005a;
+		-moz-box-shadow: 0 5px 0 #ff005a;
+		box-shadow: 0 5px 0 #ff005a;
+	}
+	.inputButton:hover {
+		top: 2px;
+		-webkit-box-shadow: 0 3px 0 #bf0060;
+		-moz-box-shadow: 0 3px 0 #bf0060;
+		box-shadow: 0 3px 0 #bf0060;
+	}
+	.inputButton:active {
+		top: 5px;
+		box-shadow: none;
+	}
+	.inputButton:focus {
+		outline: none;
+	}
+</style>
 <h1>Welcome <%= @resource.name %>!</h1>
 <p>You just registered for the best Party Organizing service in the world <br>
-We promise we won't send any spam. <br>
-Here's your account details, verify them before confirming your account. <br>
-Name: <%= @resource.name %> <br>
-Email: <%= @resource.email %> <br>
-Username: <%= @resource.username %> <br>
+	We promise we won't send any spam. <br>
+	Here's your account details, verify them before confirming your account. <br>
+	Name: <%= @resource.name %> <br>
+	Email: <%= @resource.email %> <br>
+	Username: <%= @resource.username %> <br>
 </p>
 <p>You can confirm your account email through the link below:</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<button class="inputButton"><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></button>
