@@ -143,9 +143,3 @@ body {
   opacity: 1.0;
 }
 
-.social{
-  height: 100px;
-  width: 100px;
-  background-size: cover;
-  background-image: url(icons/facebook.png);
-}
