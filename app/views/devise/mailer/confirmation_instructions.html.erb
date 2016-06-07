@@ -131,6 +131,10 @@
 																<br>
 																You just registered for the best Party Organizing service in the world <br>
 																We promise we won't send any spam. <br>
+																Here's your account details, verify them before confirming your account. <br>
+																Name: <%= @resource.name %> <br>
+																Email: <%= @resource.email %> <br>
+																Username: <%= @resource.username %> <br>
 																<br>
 																<br>
 															</td>
@@ -147,14 +151,9 @@
                           <w:anchorlock/>
                           <center>
                           	<![endif]-->
-      						Here's your account details, verify them before confirming your account. <br>
-Name: <%= @resource.name %> <br>
-Email: <%= @resource.email %> <br>
-Username: <%= @resource.username %> <br>
-
-
-                          	<a
-                          	style="background-color:#178f8f;border-radius:4px;color:#ffffff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;"><%= link_to 'Activate Account!', confirmation_url(@resource, confirmation_token: @token) %></a>
+                          	<div style="background-color:#178f8f;border-radius:4px;color:#ffffff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">
+                          		<%= link_to 'Activate Account!', confirmation_url(@resource, confirmation_token: @token) %>
+                          	</div>
                         <!--[if mso]>
                           </center>
                         </v:roundrect>
