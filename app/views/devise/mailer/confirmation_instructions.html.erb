@@ -1,7 +1,9 @@
 <head>
 	<style>
+		@import url(https://fonts.googleapis.com/css?family=Montserrat);
 		/* Take care of image borders and formatting */
 		body {
+			font-family: 'Montserrat', sans-serif;
 			width: 100%;
 			height: 100%;
 			color: #37302d;
@@ -9,6 +11,7 @@
 		}
 
 		table {
+			font-family: 'Montserrat', sans-serif;
 			border-collapse: collapse !important;
 			border-radius: 10px;
 		}
@@ -31,7 +34,7 @@
 		@media screen {
 			/*Thanks Outlook 2013! http://goo.gl/XLxpyl*/
 			td, h1, h2, h3 {
-			@import url(https://fonts.googleapis.com/css?family=Montserrat);
+				font-family: 'Montserrat', sans-serif;
 			}
 		}
 	</style>
@@ -70,7 +73,7 @@
 									<tr>
 										<td>
 											<br>
-											<img src="http://thepartyapp.herokuapp.com/assets/icons/mirrorball.png" width="216" height="189" alt="disco ball">
+											<img src="http://thepartyapp.herokuapp.com/assets/icons/mirrorball.png" width="200" height="189" alt="disco ball">
 										</td>
 									</tr>
 									<tr>
@@ -106,9 +109,7 @@
                           <w:anchorlock/>
                           <center>
                           	<![endif]-->
-                          	<div style="text-align:center;background-color:#178f8f;border-radius:4px;color:#ffffff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">
-                          		<%= link_to 'Activate Account!', confirmation_url(@resource, confirmation_token: @token), :class => 'no_do' %>
-                          	</div>
+                          	<%= link_to 'Activate Account!', confirmation_url(@resource, confirmation_token: @token), :class => 'no_do', style: 'text-align:center;background-color:#178f8f;border-radius:4px;color:#ffffff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;' %>
                         <!--[if mso]>
                           </center>
                         </v:roundrect>
