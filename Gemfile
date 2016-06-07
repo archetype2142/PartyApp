@@ -5,6 +5,7 @@ ruby "2.3.0"
 
 gem 'rails', '4.2.6'
 gem "therubyracer"
+gem 'rails_admin'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 
