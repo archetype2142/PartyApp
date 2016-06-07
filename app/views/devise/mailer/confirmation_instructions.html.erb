@@ -1,95 +1,53 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>ThePartyApp</title>
-	<!-- Designed by https://github.com/kaytcat -->
-	<!-- Robot header image designed by Freepik.com -->
-
-	<style type="text/css">
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Montserrat);
+	/* Take care of image borders and formatting */
+	body {
 		@import url(https://fonts.googleapis.com/css?family=Montserrat);
-		/* Take care of image borders and formatting */
+		width: 100%;
+		height: 100%;
+		color: #37302d;
+		background: #5d005e;
+		font-size: 16px;
+	}
 
-		img {
-			max-width: 600px;
-			outline: none;
-			text-decoration: none;
-			-ms-interpolation-mode: bicubic;
+	table {
+		@import url(https://fonts.googleapis.com/css?family=Montserrat);
+		border-collapse: collapse !important;
+		border-radius: 10px;
+	}
+
+	.headline {
+		color: #ffffff;
+		font-size: 37px;
+	}
+
+	.force-full-width {
+		width: 100% !important;
+	}
+</style>
+
+<style type="text/css" media="screen">
+	@media screen {
+		/*Thanks Outlook 2013! http://goo.gl/XLxpyl*/
+		td, h1, h2, h3 {
+			font-family: 'Droid Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
 		}
+	}
+</style>
 
-		a {
-			text-decoration: none;
-			border: 0;
-			outline: none;
-			color: #bbbbbb;
+<style type="text/css" media="only screen and (max-width: 480px)">
+	/* Mobile styles */
+	@media only screen and (max-width: 480px) {
+
+		table[class="w320"] {
+			width: 320px !important;
 		}
-
-		a img {
-			border: none;
-		}
-
-		/* General styling */
-
-		td, h1, h2, h3  {
-			font-family: Helvetica, Arial, sans-serif;
-			font-weight: 400;
-		}
-
-		td {
-			text-align: center;
-		}
-
-		body {
-			-webkit-font-smoothing:antialiased;
-			-webkit-text-size-adjust:none;
-			width: 100%;
-			height: 100%;
-			color: #37302d;
-			background: #ffffff;
-			font-size: 16px;
-		}
-
-		table {
-			border-collapse: collapse !important;
-		}
-
-		.headline {
-			color: #ffffff;
-			font-size: 36px;
-		}
-
-		.force-full-width {
-			width: 100% !important;
-		}
-
-
-
-
-	</style>
-
-	<style type="text/css" media="screen">
-		@media screen {
-			/*Thanks Outlook 2013! http://goo.gl/XLxpyl*/
-			td, h1, h2, h3 {
-				font-family: 'Droid Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
-			}
-		}
-	</style>
-
-	<style type="text/css" media="only screen and (max-width: 480px)">
-		/* Mobile styles */
-		@media only screen and (max-width: 480px) {
-
-			table[class="w320"] {
-				width: 320px !important;
-			}
-
-
-		}
-	</style>
+	}
+</style>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
-<body class="body" style="padding:0; margin:0; display:block; background:#ffffff; -webkit-text-size-adjust:none" bgcolor="#ffffff">
+<body class="body" style="padding:0; margin:0; display:block; background:#5d005e; -webkit-text-size-adjust:none;" bgcolor="#ffffff">
 	<table align="center" cellpadding="0" cellspacing="0" width="100%" height="100%" >
 		<tr>
 			<td align="center" valign="top" bgcolor="#ffffff"  width="100%">
@@ -100,16 +58,16 @@
 
 								<table style="margin: 0 auto;" cellpadding="0" cellspacing="0" width="100%" style="margin:0 auto;">
 									<tr>
-										<td style="font-size: 30px; text-align:center;">
+										<td style="font-size: 40px; text-align:center; border-radius: 10px; ">
 											<br>
-											ThePartyApp
+											<strong>ThePartyApp</strong>
 											<br>
 											<br>
 										</td>
 									</tr>
 								</table>
 
-								<table style="margin: 0 auto;" cellpadding="0" cellspacing="0" width="100%" bgcolor="#4dbfbf">
+								<table style="text-align:center; margin: 0 auto;" cellpadding="0" cellspacing="0" width="100%" bgcolor="#4dbfbf">
 									<tr>
 										<td>
 											<br>
@@ -118,39 +76,38 @@
 									</tr>
 									<tr>
 										<td class="headline">
-											Welcome <%= @resource.name %>!										</td>
-										</tr>
-										<tr>
-											<td>
-
-												<center>
-													<table style="margin: 0 auto;" cellpadding="0" cellspacing="0" width="60%">
-														<tr>
-															<td style="color:#187272;">
-																<br>
-																You just registered for the best Party Organizing service in the world <br>
-																We promise we won't send any spam. <br>
-																Here's your account details, verify them before confirming your account. <br>
-																Name: <%= @resource.name %> <br>
-																Email: <%= @resource.email %> <br>
-																Username: <%= @resource.username %> <br>
-																<br>
-																<br>
-															</td>
-														</tr>
-													</table>
-												</center>
-
-											</td>
-										</tr>
-										<tr>
-											<td>
+											Welcome <%= @resource.name %>!										
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<center>
+												<table style="margin: 0 auto;" cellpadding="0" cellspacing="0" width="60%">
+													<tr>
+														<td style="color:#187272;">
+															<br>
+															You just registered for the best Party Organizing service in the world <br>
+															We promise we won't send any spam. <br>
+															Here's your account details, verify them before confirming your account. <br>
+															Name: <%= @resource.name %> <br>
+															Email: <%= @resource.email %> <br>
+															Username: <%= @resource.username %> <br>
+															<br>
+															<br>
+														</td>
+													</tr>
+												</table>
+											</center>
+										</td>
+									</tr>
+								<tr>
+							<td>
                       <div><!--[if mso]>
                         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:50px;v-text-anchor:middle;width:200px;" arcsize="8%" stroke="f" fillcolor="#178f8f">
                           <w:anchorlock/>
                           <center>
                           	<![endif]-->
-                          	<div style="background-color:#178f8f;border-radius:4px;color:#ffffff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">
+                          	<div style="text-align:center;background-color:#178f8f;border-radius:4px;color:#ffffff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">
                           		<%= link_to 'Activate Account!', confirmation_url(@resource, confirmation_token: @token) %>
                           	</div>
                         <!--[if mso]>
@@ -163,87 +120,3 @@
                 </tr>
             </table>
 
-            <table style="margin: 0 auto;" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f5774e">
-            	<tr>
-            		<td style="background-color:#f5774e;" class="headline">
-            			<br>
-            			New Features
-            		</td>
-            	</tr>
-            	<tr>
-            		<td>
-            			<img src="http://thepartyapp.herokuapp.com/assets/icons/meter.gif" width="145" height="89" alt="meter image">
-            		</td>
-            	</tr>
-            	<tr>
-            		<td>
-
-            			<center>
-            				<table style="margin: 0 auto;" cellpadding="0" cellspacing="0" width="60%">
-            					<tr>
-            						<td style="color:#933f24;">
-            							<br>
-            							Faster sign ins with social media
-            							Now you can use social media accounts to login!
-            							<br><br>
-            						</td>
-            					</tr>
-            				</table>
-            			</center>
-
-            		</td>
-            	</tr>
-            	<tr>
-            		<td>
-                      <div><!--[if mso]>
-                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:50px;v-text-anchor:middle;width:200px;" arcsize="8%" stroke="f" fillcolor="#ac4d2f">
-                          <w:anchorlock/>
-                          <center>
-                          	<![endif]-->
-                          	<a href="http://"
-                          	style="background-color:#ac4d2f;border-radius:4px;color:#ffffff;display:inline-block;font-family: Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">Learn More</a>
-                        <!--[if mso]>
-                          </center>
-                        </v:roundrect>
-                        <![endif]--></div>
-                        <br>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-
-            <table style="margin: 0 auto;" cellpadding="0" cellspacing="0" class="force-full-width" bgcolor="#414141" style="margin: 0 auto">
-            	<tr>
-            		<td style="background-color:#414141;">
-            			<br>
-            			<br>
-            			<a href="#"><img src="http://thepartyapp.herokuapp.com/assets/icons/google_plus.gif" alt="google+"></a>
-            			<a href="#"><img src="http://thepartyapp.herokuapp.com/assets/icons/facebook.gif" alt="facebook"></a>
-            			<a href="#"><img src="http://thepartyapp.herokuapp.com/assets/icons/twitter.gif" alt="twitter"></a>
-            			<br>
-            			<br>
-            		</td>
-            	</tr>
-            	<tr>
-            		<td style="color:#bbbbbb; font-size:12px;">
-            			<a href="http://thepartyapp.herokuapp.com">View in browser</a> | <a href="#">Contact</a>
-            			<br><br>
-            		</td>
-            	</tr>
-            	<tr>
-            		<td style="color:#bbbbbb; font-size:12px;">
-            			ThePartyApp © 2016 All Rights Reserved
-            			<br>
-            			<br>
-            		</td>
-            	</tr>
-            </table>
-        </td>
-    </tr>
-</table>
-</center>
-</td>
-</tr>
-</table>
-</body>
-</html>
