@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  
   resources :services
-  devise_for :service_providers
-  devise_for :users
+devise_for :service_providers
+devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'static_pages#index'
-   get 'registrations' => 'static_pages#registrations'  
-   get 'myservices' => 'services#myservices'
+  root 'static_pages#index'
+  get 'registrations' => 'static_pages#registrations'  
+  get 'myservices' => 'services#myservices'
 
   resources :service
    # Example of regular route:
