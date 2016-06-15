@@ -17,7 +17,7 @@
         <input name="user[email]" type="email" placeholder="Enter Your Email" class="input pass" />
         <input name="user[password]" type="password" placeholder="Enter Your Password (<%= @minimum_password_length %> characters minimum)"  required="required" class="input pass" autocomplete="off" />
         <input name="user[password_confirmation]" type="password" placeholder="Password Confirmation" required="required" class="input pass" autocomplete="off" />
-
+        <%= hidden_field_tag "user[roles][]", "" %>
         <div class="actions">
           <%= f.submit "Let's Go!", :class => 'inputButton' %>
           <div class="text-center"">

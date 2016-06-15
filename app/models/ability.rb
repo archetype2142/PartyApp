@@ -1,10 +1,15 @@
 class Ability
   include CanCan::Ability
-
-  def initialize(admin)
-       admin ||= Admin.new # guest user (not logged in)
-       if admin
-       can :manage, :all
-   end
+  def initialize(user)
+    can :read, :all                   
+    if user.has_role?(:admin)
+      can :access, :rails_admin       
+      can :dashboard                                  
+      can :manage, :all    
+  elsif user.has_role?(:moderator)
+    can :access, :rails_admin       
+    can :dashboard
+    can :manage, [ServiceProvider]
+end
 end
 end
