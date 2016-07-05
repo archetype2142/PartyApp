@@ -145,13 +145,18 @@ section {
   padding: 100px 0;
 }
 header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
   background: url("/assets/header.jpg") no-repeat center center fixed;
   text-align: center;
   color: white;
+ 
 }
 header .header-content {
   position: relative;
