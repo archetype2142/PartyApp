@@ -21,7 +21,7 @@
 </style>
 <!-- Navigation -->
 <div class="custom_nav">
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -40,7 +40,6 @@
 					<% if current_user %>
 					<li class="text-center"><a href='#'>Hi, <%= current_user.name %></a></li>
 					<% end %>
-					<li class="text-center"><a id="help"  href="#">Help</a></li>
 
 					<% if current_user %>
 					<ul class="text-center nav navbar-nav navbar-right">
