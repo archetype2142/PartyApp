@@ -220,39 +220,15 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
 }
+
 .section-heading {
   margin-top: 0;
 }
 
-.btn-default.disabled,
-.btn-default[disabled],
-fieldset[disabled] .btn-default,
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover,
-fieldset[disabled] .btn-default:hover,
-.btn-default.disabled:focus,
-.btn-default[disabled]:focus,
-fieldset[disabled] .btn-default:focus,
-.btn-default.disabled.focus,
-.btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus,
-.btn-default.disabled:active,
-.btn-default[disabled]:active,
-fieldset[disabled] .btn-default:active,
-.btn-default.disabled.active,
-.btn-default[disabled].active,
-fieldset[disabled] .btn-default.active {
-  background-color: white;
-  border-color: white;
-}
-.btn-default .badge {
-  color: white;
-  background-color: #222222;
-}
 .btn-primary {
   color: black;
-  background-color: #ff005a;
-  border-color: #ff005a;
+  background-color:   #870066;
+  border-color:   #870066;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -264,41 +240,11 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #ee4b28;
-  border-color: #ed431f;
+  background-color: #5d005e;
+  border-color: #5d005e;
 }
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-  background-image: none;
-}
-.btn-primary.disabled,
-.btn-primary[disabled],
-fieldset[disabled] .btn-primary,
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled.focus,
-.btn-primary[disabled].focus,
-fieldset[disabled] .btn-primary.focus,
-.btn-primary.disabled:active,
-.btn-primary[disabled]:active,
-fieldset[disabled] .btn-primary:active,
-.btn-primary.disabled.active,
-.btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {
-  background-color: #F05F40;
-  border-color: #F05F40;
-}
-.btn-primary .badge {
-  color: #F05F40;
-  background-color: white;
-}
+
 .btn {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   border: none;
   border-radius: 300px;
   font-weight: 700;
@@ -307,13 +253,6 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl {
   padding: 15px 30px;
 }
-::-moz-selection {
+a:visited{
   color: white;
-  text-shadow: none;
-  background: #222222;
-}
-::selection {
-  color: white;
-  text-shadow: none;
-  background: #222222;
 }
