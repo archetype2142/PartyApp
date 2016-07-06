@@ -183,7 +183,7 @@ header .header-content .header-content-inner p {
   header {
     position: relative;
     text-align: center;
-    padding: 200px 15px 100px;
+    padding: 100px 15px 100px;
     min-width: 100%;
     min-height: 100%;
   }
@@ -192,7 +192,6 @@ header .header-content .header-content-inner p {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    padding: 0 50px;
   }
   header .header-content .header-content-inner {
     max-width: 1000px;
