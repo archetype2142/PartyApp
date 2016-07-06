@@ -144,10 +144,9 @@ body {
 section {
   padding: 100px 0;
 }
+
 header {
-  position: relative;
-  width: 100%;
-  min-height: auto;
+  height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -161,7 +160,7 @@ header {
 header .header-content {
   position: relative;
   text-align: center;
-  padding: 100px 15px 100px;
+  padding: 150px 15px 100px;
   width: 100%;
 }
 header .header-content .header-content-inner h1 {
@@ -216,12 +215,8 @@ header .header-content .header-content-inner p {
 }
 
 .btn-primary {
-  color: black;
-  background-color:   #870066;
-  border-color:   #870066;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
+  border-width: 2px;
+  background-color: transparent;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -229,14 +224,14 @@ header .header-content .header-content-inner p {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
+  border: 2px solid white;
   color: white;
-  background-color: #5d005e;
-  border-color: #5d005e;
+  background-color: transparent;
+  border-color: white;
 }
 
 .btn {
-  border: none;
-  border-radius: 300px;
+  border: 2px solid white;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -247,7 +242,7 @@ a:visited{
   color: white;
 }
 hr {
-  border-color: #870066;
+  border-color: white;
   border-width: 3px;
   max-width: 50px;
 }
@@ -307,4 +302,14 @@ hr.light {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px;
   }
+}
+
+.tint:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(150, 0, 0, 0.8);
 }
