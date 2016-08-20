@@ -19,9 +19,9 @@
 }
 
 body {
-  margin-top: 0px;
+  margin-top: 50px;
   background: #c79dd7;
-  padding-top: 0px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+  padding-top: 50px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
 .top-head {
@@ -154,10 +154,13 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background: url("/assets/header.jpg") no-repeat center center fixed;
+  background: url("/assets/header.jpg");
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
   text-align: center;
   color: white;
- 
 }
 header .header-content {
   position: relative;
@@ -231,7 +234,7 @@ header .header-content .header-content-inner p {
   border-color: white;
 }
 
-.btn {
+.btn2 {
   border: 2px solid white;
   font-weight: 700;
   text-transform: uppercase;

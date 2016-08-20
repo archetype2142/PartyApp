@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   get 'registrations' => 'static_pages#registrations'  
   get 'myservices' => 'services#myservices'
+  get 'birthday' => 'static_pages#birthday'
 
   resources :service
    # Example of regular route:
